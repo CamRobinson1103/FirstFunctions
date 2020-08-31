@@ -1,51 +1,93 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Transactions;
 
 namespace HelloWorld
 {
+
     class Game
     {
+        //Ends the game when true
+        private bool _gameOver = false;
+        string playerName = "none";
+        int playerHealth;
+        int playerAttack;
+        string playerRole;
+        int gameState;
+        char input;
+        public void OpenMainMenu()
+        {
 
-        bool _gameOver = false;
+            while (input != '1')
+            {
+                Console.Clear();
+                Console.WriteLine("Welcome! Please Enter your name");
+                playerName = Console.ReadLine();
+                Console.WriteLine("Are you sure you want the name " + playerName + "?");
+                input = getInput("Yes", "No");
+                if (input == '2')
+                {
+                    Console.WriteLine("Yo, that name TRASH! Try again.");
+                }
+            }
+        }
+        public char getInput(string option1, string option2)
+        {
+            char input = ' ';
+            while (input != '1' && input != '2')
+            {
+                Console.WriteLine("[1] " + option1);
+                Console.WriteLine("[2] " + option2);
+                Console.WriteLine("> ");
+                input = Console.ReadKey().KeyChar;
+                Console.WriteLine();
+            }
+            return input;
+        }
         //Run the game
         public void Run()
         {
+            //Perform initialization tasks
             Start();
-
-            while(_gameOver == false)
+            //Loop update routine until the game is over
+            while (!_gameOver)
             {
                 Update();
             }
+            //Perform cleanup tasks
             End();
         }
+
         //Performed once when the game begins
-        //Use for initializing variables
-        //Also used for performing start up tasks that should only be done once
         public void Start()
         {
-            Console.WriteLine("Welcome to my domain...");
+            gameState = 0;
+            input = ' ';
+            playerName = "Hero";
+            playerHealth = 100;
+            playerAttack = 20;
+            playerRole = "none";
         }
 
         //Repeated until the game ends
-        //Used for all game logic that will repeat
         public void Update()
         {
-            char input = ' ';
-            Console.Clear();
-            Console.WriteLine("\nTestin stuff");
-            Console.WriteLine("> ");
-            input = Console.ReadKey().KeyChar;
-            if(input == 'q')
-            {
-                _gameOver = true;
-            }
+            //switch (gameState)
+            //{
+            //    case 0:
+            //        {
+            //            OpenMainMenu();
+            //            break;
+            //        }
+            //}
+            OpenMainMenu();
         }
 
         //Performed once when the game ends
         public void End()
         {
-            Console.WriteLine("\nThanks for your money, LOSER!!!");
+
         }
     }
 }
