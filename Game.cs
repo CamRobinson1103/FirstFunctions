@@ -57,13 +57,13 @@ namespace HelloWorld
                 Console.ReadKey();
             }
             
-            Console.WriteLine("Start fight encounter");
-            int enemy = 180;
-            int playerHealth = 120;
+            Console.WriteLine("A wild suraimu appeared!");
+            int enemy = 7;
+            int playerHealth = 200;
             _gameOver = StartBattle(ref playerHealth, enemy);
 
         }
-
+        //Battlin Doods
         bool StartBattle(ref int playerHealth, int enemyHealth)
         {
             char input = ' ';
@@ -72,7 +72,7 @@ namespace HelloWorld
                 input = getInput("Attack", "Defend", "What will you do?");
                 if (input == '1')
                 {
-                    enemyHealth -= 10;
+                    enemyHealth -= 7;
                     Console.WriteLine("You did 10 damage to the enemy");
                 }
                 else if (input == '2')
@@ -81,18 +81,11 @@ namespace HelloWorld
                     Console.ReadKey();
                     continue;
                 }
-                playerHealth -= 20;
+                playerHealth -= 200;
                 Console.WriteLine("The enemy did 20 damage to you");
                 Console.ReadKey();
             }
-            if (playerHealth <= 0)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
+            return playerHealth <= 0;
         }
 
         void ViewStats()
