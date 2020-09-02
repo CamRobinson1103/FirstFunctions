@@ -75,25 +75,28 @@ namespace HelloWorld
             switch (roomNumber)
             {
                 case 0:
-                        exitMessage = "You left that place because it looked terrible.";
-                        Console.WriteLine("Before you stand a castle with a buncha scary stuff pouring out of it. It is quite unwise to go in... so you go in.");
-                        break;
-                    
+                    exitMessage = "You left that place because it looked terrible.";
+                    Console.WriteLine("Before you stand a castle with a buncha scary stuff pouring out of it. It is quite unwise to go in... so you go in.");
+                    break;
+
 
                 case 1:
-                        exitMessage = "You left the bathroom after dropp the BIGGEST dump.";
-                        Console.WriteLine("You nter the bathroom. It is so unbelievably disgusting you lost you senses while in the room.");
-
+                    exitMessage = "You left the bathroom after dropp the BIGGEST dump.";
+                    Console.WriteLine("You nter the bathroom. It is so unbelievably disgusting you lost you senses while in the room.");
+                    break;
                 case 2:
-                        exitMessage = "You left the kitchen. It smelled.";
-                        Console.WriteLine("You enter the castle's kitchen. There's knives on the ground, rats everywhere, and moldy chicken. You also regained your senses.");
-                        break;
-                    
-
+                    exitMessage = "You left the kitchen. It smelled.";
+                    Console.WriteLine("You enter the castle's kitchen. There's knives on the ground, rats everywhere, and moldy chicken. You also regained your senses.");
+                    break;
+                case 3:
+                    exitMessage = ("You leave the game room. Unfortunately, you lost the game of pool.");
+                    Console.WriteLine("You have entered the game room. You see monsters playing various games including pool. Youdecide to challenge them.");
+                    break;
                 default:
-                        exitMessage = "You left the hallway... It was so hypnotic you thought you'd throw up.";
-                        Console.WriteLine("You enter a hallway that seems to never end.");
-                    
+                    exitMessage = "You left the hallway... It was so hypnotic you thought you'd throw up.";
+                    Console.WriteLine("You enter a hallway that seems to never end.");
+                    break;
+
 
 
             }
