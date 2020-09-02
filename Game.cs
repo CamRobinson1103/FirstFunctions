@@ -131,7 +131,7 @@ namespace HelloWorld
                 Console.ReadKey();
                 Console.Clear();
                 //Slime: The Second Coming
-                Console.WriteLine("As you continue your quest to Portlad, a syndicate of slime ambush you to avenge their fallen brother!");
+                Console.WriteLine("As you continue your quest to Portlad, a syndicate of suraimu ambush you to avenge their fallen brother!");
                 int character3Health = 5;
                 int character4Health = 5;
                 int character5Health = 5;
@@ -144,6 +144,13 @@ namespace HelloWorld
                     Console.WriteLine("Charactrt 4 Health: " + character4Health);
                     Console.WriteLine("Charactrt 5 Health: " + character5Health);
                     input = GetInput("Attack", "Defend", "What will you do?");
+                    if (input =='1')
+                    {
+                        character3Health -= 0;
+                        Console.WriteLine("The suraimu took 3 damage!");
+
+                       
+                    }
                 }
 
 
@@ -201,10 +208,10 @@ namespace HelloWorld
             Console.WriteLine("Welcome to my domain...");
             gameState = 0;
             input = ' ';
-            _playerName = "Hero";
+            _playerName = "Gai";
             characterHealth = 12;
             playerHit = 5;
-            playerColor = "Rainbow";
+            playerColor = "Black";
         }
 
         //Repeated until the game ends
