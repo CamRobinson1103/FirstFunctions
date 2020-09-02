@@ -72,38 +72,29 @@ namespace HelloWorld
         void EnterRoom(int roomNumber)
         {
             string exitMessage = "";
-            switch (1+1)
+            switch (roomNumber)
             {
                 case 0:
-                    exitMessage = "You left that place because it looked terrible.";
-                    Console.WriteLine("Before you stand a phat a$$ castle.");
-                    break;
+                        exitMessage = "You left that place because it looked terrible.";
+                        Console.WriteLine("Before you stand a phat a$$ castle.");
+                        break;
+                    
 
                 case 1:
                 case 2:
-                    exitMessage = "You left the kitchen. It smelled.";
-                    Console.WriteLine("You enter the castle's kitchen. There's knCamives on the ground, rats everywhere, and moldy chicken.");
-                    break;
+                        exitMessage = "You left the kitchen. It smelled.";
+                        Console.WriteLine("You enter the castle's kitchen. There's knCamives on the ground, rats everywhere, and moldy chicken.");
+                        break;
+                    
 
                 default:
-                    exitMessage = "You left the hallway... It was so hypnotic you thought you'd throw up.";
-                    Console.WriteLine("You enter a hallway that seems to never end.");
+                        exitMessage = "You left the hallway... It was so hypnotic you thought you'd throw up.";
+                        Console.WriteLine("You enter a hallway that seems to never end.");
+                    
 
 
             }
-            if (roomNumber == 0)
-            {
-                Console.WriteLine();
-                
-            }
-            else if (roomNumber == 1)
-            {
-               
-            }
-            else if (roomNumber >= 2)
-            {
-               
-            }
+           
             Console.WriteLine("You are in room " + roomNumber);
             char input = ' ';
             input = GetInput("Go forward", "Go back", "Which direction would you like to go?");
