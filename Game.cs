@@ -91,6 +91,12 @@ namespace HelloWorld
             return characterHealth <= 0;
             Console.Clear();
 
+            Console.WriteLine("As you continue your quest to Portlad, a syndicate of slime appear before you to avenge their fallen brother!");
+            int character3Health = 5;
+            int character4Health = 5;
+            int character5Health = 5;
+            _gameOver = StartBattle(ref characterHealth, character3Health);
+            _gameOver = StartBattle(ref character4Health, character5Health);
         }
 
         void ViewStats()
