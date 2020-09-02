@@ -11,7 +11,7 @@ namespace HelloWorld
         //Ends the game when true
         bool _gameOver = false;
         string _playerName = "";
-        int playerHealth;
+        int characterHealth;
         int playerHit;
         string playerColor;
         int gameState;
@@ -58,22 +58,25 @@ namespace HelloWorld
             }
             
             Console.WriteLine("A wild suraimu appeared!");
-            int enemy = 7;
-            int playerHealth = 200;
-            _gameOver = StartBattle(ref playerHealth, enemy);
+            int character2Health = 5;
+            int characterHealth =12 ;
+            _gameOver = StartBattle(ref characterHealth, character2Health);
 
         }
         //Battlin Doods
-        bool StartBattle(ref int playerHealth, int enemyHealth)
+        bool StartBattle(ref int characterHealth, int character2Health)
         {
             char input = ' ';
-            while (playerHealth > 0 && enemyHealth > 0)
+            while (characterHealth > 0 && character2Health > 0)
             {
+                Console.WriteLine("Charactrt 1 Health: " + characterHealth);
+                Console.WriteLine("Character 2 Health " + character2Health);
                 input = getInput("Attack", "Defend", "What will you do?");
                 if (input == '1')
                 {
-                    enemyHealth -= 7;
-                    Console.WriteLine("You did 10 damage to the enemy");
+                    character2Health -= 7;
+                    Console.WriteLine("You did 3 damage to the enemy");
+                    character2Health -= 4;
                 }
                 else if (input == '2')
                 {
@@ -81,11 +84,13 @@ namespace HelloWorld
                     Console.ReadKey();
                     continue;
                 }
-                playerHealth -= 200;
-                Console.WriteLine("The enemy did 20 damage to you");
+                characterHealth -= 12;
+                Console.WriteLine("The suraimu did 1 damage to you");
                 Console.ReadKey();
             }
-            return playerHealth <= 0;
+            return characterHealth <= 0;
+            Console.Clear();
+
         }
 
         void ViewStats()
@@ -134,7 +139,7 @@ namespace HelloWorld
             gameState = 0;
             input = ' ';
             _playerName = "Hero";
-            playerHealth = 100;
+            characterHealth = 12;
             playerHit = 5;
             playerColor = "Rainbow";
         }
