@@ -23,7 +23,7 @@ namespace HelloWorld
                 while (input != '1')
                 {
                     Console.Clear();
-                    Console.WriteLine("Welcome! Please Enter your name");
+                    Console.WriteLine("Welcome to my domain... Enter your name.");
                     _playerName = Console.ReadLine();
                     Console.WriteLine("Are you sure you want the name " + _playerName + "?");
                     input = getInput("Yes", "No", "Are you sure you want the name " + _playerName + "?");
@@ -45,16 +45,18 @@ namespace HelloWorld
             input = getInput("Go Left", "Go right", "You came to a cross road");
             if (input == '1')
             {
-                Console.WriteLine("A group of bandits appered! IT'S AN AMBUSH and they want all ya moola!" + "There is a/n " + petName + "out and slices the bandit with the dagger in its mouth. They are ded." + "It seems like the doggo wants to join you on your quest. What do you want to name it?");
+                Console.WriteLine("A group of bandits appered! IT'S AN AMBUSH and they want all ya moola!" + "There is a " + petName + " out and slices the bandit with the dagger in its mouth. They are ded." + " It seems like the doggo wants to join you on your quest. What do you want to name it?");
                 RequestName(ref petName);
+                petName = Console.ReadLine();
                 Console.WriteLine("Its new name is " + petName);
+                Console.ReadKey();
             }
             else if (input == '2')
             {
                 Console.WriteLine("You continue your journey and head towards Portlad");
                 Console.ReadKey();
             }
-            Console.Clear();
+            
             Console.WriteLine("Start fight encounter");
             int enemy = 180;
             int playerHealth = 120;
@@ -141,7 +143,7 @@ namespace HelloWorld
             _playerName = "Hero";
             playerHealth = 100;
             playerHit = 5;
-            playerColor = "none";
+            playerColor = "Rainbow";
         }
 
         //Repeated until the game ends
