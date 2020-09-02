@@ -75,8 +75,9 @@ namespace HelloWorld
             switch (roomNumber)
             {
                 case 0:
-                        exitMessage = "You left that place because it looked terrible.";
-                        Console.WriteLine("Before you stand a phat a$$ castle.");
+                        
+                        Console.WriteLine("Before you stand a castle with a buncha scary stuff pouring out of it. It is quite unwise to go in... so you go in.");
+                         exitMessage = "You left that place because it looked terrible.";
                         break;
                     
 
@@ -146,8 +147,10 @@ namespace HelloWorld
                     input = GetInput("Attack", "Defend", "What will you do?");
                     if (input =='1')
                     {
-                        character3Health -= 0;
+                        character3Health -= 3;
                         Console.WriteLine("The suraimu took 3 damage!");
+                        character3Health -= 2;
+
 
                        
                     }
