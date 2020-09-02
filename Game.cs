@@ -23,7 +23,7 @@ namespace HelloWorld
 
                 {
                     Console.Clear();
-                    Console.WriteLine("Welcome to my domain... Enter your name.");
+                    Console.WriteLine("Welcome to my domain... Enter your name, ugly.");
                     _playerName = Console.ReadLine();
                     Console.WriteLine("Are you sure you want the name " + _playerName + "?");
                     input = GetInput("Yes", "No", "Are you sure you want the name " + _playerName + "?");
@@ -75,16 +75,18 @@ namespace HelloWorld
             switch (roomNumber)
             {
                 case 0:
-                        
+                        exitMessage = "You left that place because it looked terrible.";
                         Console.WriteLine("Before you stand a castle with a buncha scary stuff pouring out of it. It is quite unwise to go in... so you go in.");
-                         exitMessage = "You left that place because it looked terrible.";
                         break;
                     
 
                 case 1:
+                        exitMessage = "You left the bathroom after dropp the BIGGEST dump.";
+                        Console.WriteLine("You nter the bathroom. It is so unbelievably disgusting you lost you senses while in the room.");
+
                 case 2:
                         exitMessage = "You left the kitchen. It smelled.";
-                        Console.WriteLine("You enter the castle's kitchen. There's knCamives on the ground, rats everywhere, and moldy chicken.");
+                        Console.WriteLine("You enter the castle's kitchen. There's knives on the ground, rats everywhere, and moldy chicken. You also regained your senses.");
                         break;
                     
 
